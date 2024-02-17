@@ -51,7 +51,7 @@ kw_create_wireset=None):
 #########################################################################
 ## Check existing names and define new one
     
-    if kw_name[-1] <> '-':
+    if kw_name[-1] != '-':
         kw_name = kw_name + '-'    
     
     featurenames = ass.features.keys()
@@ -63,7 +63,7 @@ kw_create_wireset=None):
         i = i+1
         currname = kw_name+str(i)
         for name in featurenames:
-            if name.find(currname)<>-1:
+            if name.find(currname) != -1:
                 x = 0
     
     cntnname = currname    
@@ -188,7 +188,7 @@ kw_create_wireset=None):
 
     if (kw_rb_section=='Create new connector section') or (kw_pd_reuse_section=='None. Create new is used'):
         
-        if kw_pd_new_section<>'Axial':
+        if kw_pd_new_section != 'Axial':
             a = kw_pd_new_section.upper()
             secconstante = SymbolicConstant(a)
             secname = kw_pd_new_section+'-ConnSection'
